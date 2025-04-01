@@ -40,7 +40,7 @@ docker run \
 mvance/unbound:latest
 ```
 
-By default, this image forwards queries Cloudflare DNS server over TLS. In other words, it does not act as a recursive server. The [unbound.sh file](1.17.0/data/unbound.sh) provides the configuration unless it is overriden as described below.
+By default, this image forwards queries Cloudflare DNS server over TLS. In other words, it does not act as a recursive server. The [unbound.sh file](1.17.0/data/unbound.sh) provides the configuration unless it is overridden as described below.
 
 *Note: The example [unbound.conf](unbound.conf) file is different from the one set by [unbound.sh file](1.17.0/data/unbound.sh). The example is provided to help you re-configure this as a [recursive server](https://github.com/MatthewVance/unbound-docker#recursive-config).*
 
