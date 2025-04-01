@@ -116,8 +116,8 @@ server:
     # PRIVACY SETTINGS
     ###########################################################################
 
-    # RFC 8198. Use the DNSSEC NSEC chain to synthesize NXDO-MAIN and other
-    # denials, using information from previous NXDO-MAINs answers. In other
+    # RFC 8198. Use the DNSSEC NSEC chain to synthesize NXDOMAIN and other
+    # denials, using information from previous NXDOMAINs answers. In other
     # words, use cached NSEC records to generate negative answers within a
     # range and positive answers from wildcards. This increases performance,
     # decreases latency and resource utilization on both authoritative and
@@ -172,8 +172,8 @@ server:
     # advertised in the DS record.
     harden-algo-downgrade: yes
 
-    # RFC 8020. returns nxdomain to queries for a name below another name that
-    # is already known to be nxdomain.
+    # RFC 8020. returns NXDOMAIN to queries for a name below another name that
+    # is already known to be NXDOMAIN.
     harden-below-nxdomain: yes
 
     # Require DNSSEC data for trust-anchored zones, if such data is absent, the
