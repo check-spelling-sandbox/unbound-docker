@@ -191,7 +191,7 @@ server:
     # protocol developments that want to add records.
     harden-unknown-additional: yes
 
-    # RFC 8020. returns NXDOMAIN to queries for a name below another name that
+    # RFC 8020. Returns NXDOMAIN to queries for a name below another name that
     # is already known to be NXDOMAIN.
     harden-below-nxdomain: yes
 
