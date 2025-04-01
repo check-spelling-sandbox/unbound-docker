@@ -40,7 +40,7 @@ docker run \
 mvance/unbound:latest
 ```
 
-By default, this image forwards queries Cloudflare DNS server over TLS. In other words, it does not act as a recursive server. The [unbound.sh file](1.17.0/data/unbound.sh) provides the configuration unless it is overriden as described below.
+By default, this image forwards queries Cloudflare DNS server over TLS. In other words, it does not act as a recursive server. The [unbound.sh file](1.17.0/data/unbound.sh) provides the configuration unless it is overridden as described below.
 
 *Note: The example [unbound.conf](unbound.conf) file is different from the one set by [unbound.sh file](1.17.0/data/unbound.sh). The example is provided to help you re-configure this as a [recursive server](https://github.com/MatthewVance/unbound-docker#recursive-config).*
 
@@ -256,7 +256,7 @@ Restarting:
 kubectl rollout restart deployment dns 
 ```
 
-An example deployment can be viewed [here](k8s/deployment.yml). It is not ready since you need to fill it with your
+See an [example deployment](k8s/deployment.yml). It is not ready since you need to fill it with your
 records and the main unbound configuration file.
 
 > A fair warning: The example is not using a Service but a hostPort, thus this is only a mock-up. One should not use hostPort 
@@ -269,7 +269,7 @@ records and the main unbound configuration file.
 
 ## Recursive config
 
-The default config forwards forwards DNS queries to another DNS server over TLS. If you would rather this work as a recursive DNS server, you must [use a customized Unbound configuration](https://github.com/MatthewVance/unbound-docker#use-a-customized-unbound-configuration). An [example unbound.conf](https://github.com/MatthewVance/unbound-docker/blob/master/unbound.conf) file to configure unbound as a recursive server is available as a guide.
+The default config forwards DNS queries to another DNS server over TLS. If you would rather this work as a recursive DNS server, you must [use a customized Unbound configuration](https://github.com/MatthewVance/unbound-docker#use-a-customized-unbound-configuration). An [example unbound.conf](https://github.com/MatthewVance/unbound-docker/blob/master/unbound.conf) file to configure unbound as a recursive server is available as a guide.
 
 ## Performance
 

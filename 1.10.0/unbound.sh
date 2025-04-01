@@ -51,7 +51,7 @@ server:
     # and thus less queries are made to look up the data. Zero makes sure the
     # data in the cache is as the domain owner intended, higher values,
     # especially more than an hour or so, can lead to trouble as the data in
-    # the cache does not match up with the actual data any more.
+    # the cache does not match up with the actual data anymore.
     cache-min-ttl: 300
 
     # Set the working directory for the program.
@@ -60,7 +60,7 @@ server:
     # RFC 6891. Number of bytes size to advertise as the EDNS reassembly buffer
     # size. This is the value put into datagrams over UDP towards peers.
     # 4096 is RFC recommended. 1472 has a reasonable chance to fit within a
-    # single Ethernet frame, thus lessing the chance of fragmentation
+    # single Ethernet frame, thus reducing the chance of fragmentation
     # reassembly problems (usually seen as timeouts). Setting to 512 bypasses
     # even the most stringent path MTU problems, but is not recommended since
     # the amount of TCP fallback generated is excessive.
@@ -103,8 +103,8 @@ server:
     # PRIVACY SETTINGS
     ###########################################################################
 
-    # RFC 8198. Use the DNSSEC NSEC chain to synthesize NXDO-MAIN and other
-    # denials, using information from previous NXDO-MAINs answers. In other
+    # RFC 8198. Use the DNSSEC NSEC chain to synthesize NXDOMAIN and other
+    # denials, using information from previous NXDOMAINs answers. In other
     # words, use cached NSEC records to generate negative answers within a
     # range and positive answers from wildcards. This increases performance,
     # decreases latency and resource utilization on both authoritative and
@@ -112,7 +112,7 @@ server:
     # resilience to certain DoS attacks in some circumstances.
     aggressive-nsec: yes
 
-    # Extra delay for timeouted UDP ports before they are closed, in msec.
+    # Extra delay for timed-out UDP ports before they are closed, in msec.
     # This prevents very delayed answer packets from the upstream (recursive)
     # servers from bouncing against closed ports and setting off all sort of
     # close-port counters, with eg. 1500 msec. When timeouts happen you need
@@ -159,8 +159,8 @@ server:
     # advertised in the DS record.
     harden-algo-downgrade: yes
 
-    # RFC 8020. returns nxdomain to queries for a name below another name that
-    # is already known to be nxdomain.
+    # RFC 8020. Returns NXDOMAIN to queries for a name below another name that
+    # is already known to be NXDOMAIN.
     harden-below-nxdomain: yes
 
     # Require DNSSEC data for trust-anchored zones, if such data is absent, the
@@ -216,7 +216,7 @@ server:
     # outside peers (e.g., auth-zone urls, DNS over TLS connections).
     tls-cert-bundle: /etc/ssl/certs/ca-certificates.crt
 
-    # Set the total number of unwanted replies to eep track of in every thread.
+    # Set the total number of unwanted replies to keep track of in every thread.
     # When it reaches the threshold, a defensive action of clearing the rrset
     # and message caches is taken, hopefully flushing away any poison.
     # Unbound suggests a value of 10 million.
