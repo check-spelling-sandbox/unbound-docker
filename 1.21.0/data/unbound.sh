@@ -138,7 +138,7 @@ server:
     # resilience to certain DoS attacks in some circumstances.
     aggressive-nsec: yes
 
-    # Extra delay for timeouted UDP ports before they are closed, in msec.
+    # Extra delay for timed-out UDP ports before they are closed, in msec.
     # This prevents very delayed answer packets from the upstream (recursive)
     # servers from bouncing against closed ports and setting off all sort of
     # close-port counters, with eg. 1500 msec. When timeouts happen you need
