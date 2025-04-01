@@ -256,7 +256,7 @@ Restarting:
 kubectl rollout restart deployment dns 
 ```
 
-An example deployment can be viewed [here](k8s/deployment.yml). It is not ready since you need to fill it with your
+See an [example deployment](k8s/deployment.yml). It is not ready since you need to fill it with your
 records and the main unbound configuration file.
 
 > A fair warning: The example is not using a Service but a hostPort, thus this is only a mock-up. One should not use hostPort 
