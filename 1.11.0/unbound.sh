@@ -60,7 +60,7 @@ server:
     # RFC 6891. Number of bytes size to advertise as the EDNS reassembly buffer
     # size. This is the value put into datagrams over UDP towards peers.
     # 4096 is RFC recommended. 1472 has a reasonable chance to fit within a
-    # single Ethernet frame, thus lessing the chance of fragmentation
+    # single Ethernet frame, thus reducing the chance of fragmentation
     # reassembly problems (usually seen as timeouts). Setting to 512 bypasses
     # even the most stringent path MTU problems, but is not recommended since
     # the amount of TCP fallback generated is excessive.
