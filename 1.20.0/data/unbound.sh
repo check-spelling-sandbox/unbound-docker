@@ -54,7 +54,7 @@ server:
     # and thus less queries are made to look up the data. Zero makes sure the
     # data in the cache is as the domain owner intended, higher values,
     # especially more than an hour or so, can lead to trouble as the data in
-    # the cache does not match up with the actual data any more.
+    # the cache does not match up with the actual data anymore.
     cache-min-ttl: 300
 
     # Set the working directory for the program.
@@ -360,10 +360,11 @@ server:
 
     # UDP queries that have waited in the socket buffer for a long time can be
     # dropped. The time is set in seconds, 3 could be a good value to ignore old
-    # queries that likely the client does not need a reply for any more. This 
-    # could happen if the host has not been able to service the queries for a 
-    # while, i.e. Unbound is not running, and then is enabled again. It uses 
-    # timestamp socket options.
+    # queries that likely the client does not need a reply anymore. This could
+    # happen if the host has not been able to service the queries for a while,
+    # i.e. Unbound is not running, and then is enabled again. It uses timestamp
+    # socket options.
+
     sock-queue-timeout: 3
 
     # Open dedicated listening sockets for incoming queries for each thread and

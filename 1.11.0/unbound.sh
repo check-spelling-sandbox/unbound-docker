@@ -51,7 +51,7 @@ server:
     # and thus less queries are made to look up the data. Zero makes sure the
     # data in the cache is as the domain owner intended, higher values,
     # especially more than an hour or so, can lead to trouble as the data in
-    # the cache does not match up with the actual data any more.
+    # the cache does not match up with the actual data anymore.
     cache-min-ttl: 300
 
     # Set the working directory for the program.
